@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xml:th="https://www.thymeleaf.org"
+      xml:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6"
+      xmlns:sec="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Greeting</title>
+</head>
+<body>
+    <h1 th:inline="text">Hello Greeting <span th:remove="tag" sec:authentication="name">thymeleaf</span>!</h1>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+</body>
+</html>
